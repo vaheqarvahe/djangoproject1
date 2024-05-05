@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Template</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .content {
+        margin-bottom: 20px;
+    }
+    .image-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .button-container {
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #666;
+        line-height: 1.6;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .confirm-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    .confirm-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Welcome {{username1}}</h1>
+        <h1>Welcome to our Community, {{username1}}!</h1>
+<p>We're thrilled to have you join us. Get ready to embark on an exciting journey with our vibrant community.</p>
+
+    </div>
+    <div class="content">
+        <p><b>token - </b>{{token}}</p>
+        <p><b>user_id - </b>{{user_id}}</p>
+    </div>
+    <div class="image-container">
+        <img src="cid:vazgen" alt="Optional Image">
+    </div>
+    <div class="button-container">
+        <a class="confirm-button" href="http://localhost:8080/wait/{{user_id}}/{{token}}">Confirm</a>
+    </div>
+</div>
+</body>
+</html>
